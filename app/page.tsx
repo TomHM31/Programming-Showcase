@@ -48,8 +48,7 @@ export default function Home() {
                   Tom Hoang
                 </a>
               </p>
-              <p>
-              </p>
+              <p></p>
             </div>
           </section>
           <section className="mb-8">
@@ -57,8 +56,8 @@ export default function Home() {
               Summary
             </h2>
             <p>
-              Passionate AI enthusiastic with experience in machine learning, deep
-              learning, and data analysis.
+              Passionate AI enthusiastic with experience in machine learning,
+              deep learning, and data analysis.
             </p>
           </section>
           <section className="mb-12">
@@ -67,40 +66,56 @@ export default function Home() {
             </h2>
             <div className="mb-4">
               <div className="flex justify-between items-center mb-4">
-              <h3 className="text-l font-semibold mb-3">FPT Software - Full Stack Developer & AI researcher (STU)</h3>
-              <p className="text-gray-600">Oct 2023 - Jan 2024</p>
+                <h3 className="text-l font-semibold mb-3">
+                  FPT Software - Full Stack Developer & AI researcher (STU)
+                </h3>
+                <p className="text-gray-600">Oct 2023 - Jan 2024</p>
               </div>
               <ul className="list-disc list-inside">
                 <li>
-                Built advanced regression, classification, and clustering models for research and product development
+                  Built advanced regression, classification, and clustering
+                  models for research and product development
                 </li>
                 <li>
-                  Collaborated with senior DevOps, achieving a 15% boost in coding efficiency
+                  Collaborated with senior DevOps, achieving a 15% boost in
+                  coding efficiency
                 </li>
               </ul>
             </div>
             <div>
               <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold mb-3">
-              FPT Software - AI Prompt (EBS)
-              </h3>
-              <p className="text-gray-600">Oct 2024 - Jan 2025</p>
+                <h3 className="text-xl font-semibold mb-3">
+                  FPT Software - AI Prompt (EBS)
+                </h3>
+                <p className="text-gray-600">Oct 2024 - Jan 2025</p>
               </div>
               <ul className="list-disc list-inside">
-                <li>Created and optimized AI prompts for email automation, translation, and data analysis</li>
-                <li>Implemented data pipelines for more efficient processing and analytics</li>
+                <li>
+                  Created and optimized AI prompts for email automation,
+                  translation, and data analysis
+                </li>
+                <li>
+                  Implemented data pipelines for more efficient processing and
+                  analytics
+                </li>
               </ul>
             </div>
             <div>
               <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold mb-3">
-                Twin - AI Prompt & Chatbot
-              </h3>
-              <p className="text-gray-600">Oct 2024 - Jan 2025</p>
+                <h3 className="text-xl font-semibold mb-3">
+                  Twin - AI Prompt & Chatbot
+                </h3>
+                <p className="text-gray-600">Oct 2024 - Jan 2025</p>
               </div>
               <ul className="list-disc list-inside">
-                <li>Developed and integrated AI-driven chatbots using Google “Gemini” with vector DB and BigQuery</li>
-                <li>Implement new conversation-based features that boosted overall efficiency by 20%</li>
+                <li>
+                  Developed and integrated AI-driven chatbots using Google
+                  “Gemini” with vector DB and BigQuery
+                </li>
+                <li>
+                  Implement new conversation-based features that boosted overall
+                  efficiency by 20%
+                </li>
               </ul>
             </div>
           </section>
