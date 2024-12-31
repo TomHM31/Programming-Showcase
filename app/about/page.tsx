@@ -1,5 +1,6 @@
 import Image from "next/image";
 import profileImage from "../images/1.png";
+import { GrAchievement } from "react-icons/gr";
 // import achievement1 from "../images/achievement1.png";
 // import achievement2 from "../images/achievement2.png";
 // import achievement3 from "../images/achievement3.png";
@@ -8,11 +9,11 @@ import Header from "../components/header";
 
 export default function About() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6 font-mono">
+    <div className="min-h-screen bg-gray p-6 font-mono text-white">
       <Header />
       <main className="max-w-7xl mx-auto space-y-16 py-12 mt-24">
         {/* Section 1: Introduction */}
-        <div className="bg-white rounded-xl shadow-lg p-12 mb-12 fade-left mt-19">
+        <div className="bg-zinc-800 rounded-xl shadow-lg p-12 mb-12 fade-left mt-19">
           <div className="flex flex-col md:flex-row items-center gap-8">
             <Image
               src={profileImage}
@@ -26,7 +27,7 @@ export default function About() {
               <p className="text-xl text-gray-600 mb-4">
                 Third Year Student At Deakin University{" "}
               </p>
-              <p className="text-gray-500 max-w-2xl">
+              <p className="text-white-500 max-w-2xl">
                 Hello! I'm currently a third-year student at Deakin University,
                 pursuing a Bachelor of Artificial Intelligence. My studies focus
                 on developing innovative AI solutions and understanding the
@@ -39,39 +40,39 @@ export default function About() {
         </div>
 
         {/* Section 2: Achievements */}
-        <div className="bg-white rounded-xl shadow-lg p-12 mb-12 fade-right">
-          <h2 className="heading-2">Recent Achievements</h2>
+        <div className="bg-zinc-800 rounded-xl shadow-lg p-12 mb-12 fade-right">
+          <h2 className="heading-2 mb-6">Recent Achievements</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
                 title: "Achievement 1",
                 date: "January 2024",
-                image: logo,
+                icon: GrAchievement,
                 description: "Description of achievement 1",
               },
               {
                 title: "Achievement 2",
                 date: "March 2024",
-                image: logo,
+                icon: GrAchievement,
                 description: "Description of achievement 2",
               },
               {
                 title: "Achievement 3",
                 date: "May 2024",
-                image: logo,
+                icon: GrAchievement,
                 description: "Description of achievement 3",
               },
             ].map((achievement, index) => (
               <div
                 key={index}
-                className="bg-gray-50 rounded-lg p-6 hover:shadow-xl transition-shadow"
+                className="bg-gray-50 rounded-lg p-6 hover:shadow-xl transition-shadow flex flex-col items-start"
               >
-                <Image
-                  src={logo}
-                  alt={achievement.title}
-                  className="profile-image"
-                />
-                <h3 className="font-bold mb-2">{achievement.title}</h3>
+                {/* Render the React icon as a component */}
+                <achievement.icon className="text-5xl text-gray-700 mb-4" />
+
+                <h3 className="font-bold text-xl mb-2 text-gray-800">
+                  {achievement.title}
+                </h3>
                 <p className="text-sm text-gray-500 mb-2">{achievement.date}</p>
                 <p className="text-gray-600">{achievement.description}</p>
               </div>
@@ -80,15 +81,13 @@ export default function About() {
         </div>
 
         {/* Section 3: Hobbies */}
-        <section className="mb-8">
-          <h2 className="text-2xl font-semibold border-b pb-2 mb-4">
-            Hobbies & Interests
-          </h2>
+        <section className="bg-zinc-800 rounded-xl shadow-lg p-12 fade-right">
+          <h2 className="heading-2 mb-8">Hobbies & Interests</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {/* Gym */}
             <div className="flex flex-col items-center">
               <Image
-                src="/images/gym.jpg"
+                src="/images/1.png"
                 alt="Gym"
                 width={200}
                 height={200}
@@ -136,11 +135,16 @@ export default function About() {
         </section>
 
         {/* Section 4: Quote */}
+        <h2 className="heading-2">
+          Quote that will always live free in my head
+        </h2>
         <div className="blue-beauty rounded-xl shadow-lg p-16 mb-16 text-white text-center fade-right">
+          {/* New headline */}
+
           <blockquote className="text-2xl italic font-light">
             "Precision is the difference between a butcher and a surgeon."
           </blockquote>
-          <p className="mt-4 font-medium">- Your Name</p>
+          <p className="mt-4 font-medium">- Camille</p>
         </div>
       </main>
     </div>

@@ -1,5 +1,4 @@
 import Head from "next/head";
-import "../app/styles/global.css";
 import Link from "next/link";
 import Image from "next/image";
 import portrait from "./images/portrait.jpg";
@@ -8,7 +7,7 @@ import Header from "./components/header";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6 font-mono ">
+    <div className="min-h-screen bg-gray p-6 font-mono ">
       <Header />
       <div className="hero-section text-white text-center">
         <h1 className="text-5xl font-bold">Welcome to My Portfolio</h1>
@@ -48,7 +47,6 @@ export default function Home() {
                   Tom Hoang
                 </a>
               </p>
-              <p></p>
             </div>
           </section>
           <section className="mb-8">

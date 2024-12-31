@@ -72,7 +72,7 @@ export default function Changelog() {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6 font-mono">
+    <div className="min-h-screen bg-gray p-6 font-mono">
       <Header />
 
       <section className="mb-8 mt-36 max-w-4xl mx-auto">

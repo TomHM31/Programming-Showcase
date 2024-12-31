@@ -8,13 +8,13 @@ import Header from "../components/header";
 
 export default function Dashboard() {
   return (
-    <div className="min-h-screen bg-gray-100 p-6 font-mono">
+    <div className="min-h-screen bg-gray p-6 font-mono">
       <Header />
 
-      <main className="dashboard">
-        <h1 className="heading-2 ">Projects</h1>
+      <main className="dashboard text-white">
+        <h1 className="heading-2 text-white">Projects</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-gray-50 p-6 rounded-lg fade-up  ">
+          <div className="bg-zinc-700 text-white p-6 rounded-lg fade-up  ">
             <h2 className="text-xl font-semibold mb-4">Lost In Space</h2>
             <div className="flex flex-row items-start gap-10">
               <Link href="https://gradienty.codes/animations">
@@ -28,7 +28,7 @@ export default function Dashboard() {
               </Link>
               <div className="flex-1 flex-col h-full">
                 <div>
-                  <p className="text-gray-700">"A 2-D space exploration"</p>
+                  <p className="">"A 2-D space exploration"</p>
                   <p className="mt-3">Additional content</p>
                   <p className="mt-3">Additional content</p>
                   <p className="mt-3">Additional content</p>
@@ -41,7 +41,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg fade-up delay-100 ">
+          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
             <h2 className="text-xl font-semibold mb-4">AI Chatbox</h2>
             <div className="flex flex-row items-start gap-10">
               <Link href="https://gradienty.codes/animations">
@@ -55,7 +55,7 @@ export default function Dashboard() {
               </Link>
               <div className="flex-1 flex-col h-full">
                 <div>
-                  <p className="text-gray-700">"Chatbox powered by Gemini "</p>
+                  <p className="">"Chatbox powered by Gemini "</p>
                   <p className="mt-2">Additional content</p>
                   <p className="mt-2">Additional content</p>
                   <p className="mt-2">Additional content</p>
@@ -68,7 +68,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg fade-up delay-100 ">
+          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
             <h2 className="text-xl font-semibold mb-4">Statistics</h2>
             <div className="flex flex-row items-start gap-10">
               <Link href="https://gradienty.codes/animations">
@@ -82,7 +82,7 @@ export default function Dashboard() {
               </Link>
               <div className="flex-1 flex-col h-full">
                 <div>
-                  <p className="text-gray-700">Description of the project</p>
+                  <p className="">Description of the project</p>
                   <p className="mt-2">Additional content</p>
                   <p className="mt-2">Additional content</p>
                   <p className="mt-2">Additional content</p>
@@ -95,7 +95,7 @@ export default function Dashboard() {
             </div>
           </div>
 
-          <div className="bg-gray-50 p-6 rounded-lg fade-up delay-100 ">
+          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
             <h2 className="text-xl font-semibold mb-4">Statistics</h2>
             <div className="flex flex-row items-start gap-10">
               <Link href="https://gradienty.codes/animations">

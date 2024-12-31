@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
-import "./styles/global.css";
+import "./global.css";
 import { Space_Mono } from "next/font/google";
 
 const spaceMono = Space_Mono({
@@ -31,9 +30,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+      <body className="min-h-screen bg-[#232325] text-gray-900">
         {children}
       </body>
     </html>
