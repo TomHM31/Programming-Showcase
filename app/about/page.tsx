@@ -79,34 +79,61 @@ export default function About() {
           </div>
         </div>
 
-        {/* Section 3: Skills */}
-        <div className="bg-white rounded-xl shadow-lg p-12 mb-16 slide-top">
-          <h2 className="heading-1">Skills</h2>
-          <div className="space-y-6">
-            {[
-              { name: "Skill 1", level: 90, color: "#3B82F6" },
-              { name: "Skill 2", level: 85, color: "#8B5CF6" },
-              { name: "Skill 3", level: 85, color: "#06B6D4" },
-              { name: "Skill 4", level: 95, color: "#6366F1" },
-            ].map((skill, index) => (
-              <div key={index} className="relative">
-                <div className="flex justify-between mb-2 rounded-full animate-bounce">
-                  <span className="font-medium">{skill.name}</span>
-                  <span>{skill.level}%</span>
-                </div>
-                <div className="h-2 bg-gray-200 rounded-full">
-                  <div
-                    className="h-full rounded-full transition-all duration-500"
-                    style={{
-                      width: `${skill.level}%`,
-                      backgroundColor: skill.color,
-                    }}
-                  />
-                </div>
-              </div>
-            ))}
+        {/* Section 3: Hobbies */}
+        <section className="mb-8">
+          <h2 className="text-2xl font-semibold border-b pb-2 mb-4">
+            Hobbies & Interests
+          </h2>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {/* Gym */}
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/gym.jpg"
+                alt="Gym"
+                width={200}
+                height={200}
+                className="rounded-lg shadow-md"
+              />
+              <p className="mt-2">Gym</p>
+            </div>
+
+            {/* Gaming */}
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/gaming.jpg"
+                alt="Gaming"
+                width={200}
+                height={200}
+                className="rounded-lg shadow-md"
+              />
+              <p className="mt-2">Gaming</p>
+            </div>
+
+            {/* Music */}
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/music.jpg"
+                alt="Music"
+                width={200}
+                height={200}
+                className="rounded-lg shadow-md"
+              />
+              <p className="mt-2">Music</p>
+            </div>
+
+            {/* Photography */}
+            <div className="flex flex-col items-center">
+              <Image
+                src="/images/photography.jpg"
+                alt="Photography"
+                width={200}
+                height={200}
+                className="rounded-lg shadow-md"
+              />
+              <p className="mt-2">Photography</p>
+            </div>
           </div>
-        </div>
+        </section>
 
         {/* Section 4: Quote */}
         <div className="blue-beauty rounded-xl shadow-lg p-16 mb-16 text-white text-center fade-right">
