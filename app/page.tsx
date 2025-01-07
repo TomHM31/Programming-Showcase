@@ -6,6 +6,14 @@ import ChatBox from "./components/chatbox";
 import Header from "./components/header";
 
 export default function Home() {
+  const authorName = process.env.NEXT_PUBLIC_AUTHOR_NAME ?? "Author Name";
+  const authorEmail =
+    process.env.NEXT_PUBLIC_AUTHOR_EMAIL ?? "example@example.com";
+  const authorPhone = process.env.NEXT_PUBLIC_AUTHOR_PHONE ?? "000-000-0000";
+  const linkedInText =
+    process.env.NEXT_PUBLIC_AUTHOR_LINKEDIN_TEXT ?? "LinkedIn Profile";
+  const linkedInUrl =
+    process.env.NEXT_PUBLIC_AUTHOR_LINKEDIN_URL ?? "https://www.linkedin.com/";
   return (
     <div className="min-h-screen bg-gray p-6 font-mono ">
       <Header />
@@ -14,7 +22,7 @@ export default function Home() {
         <p className="text-xl">Explore my work and experience in AI</p>
       </div>
       <div className="content-wrapper mt-32">
-        <ChatBox />
+        {/* <ChatBox /> */}
         <div className="content-box">
           <section className="mb-8">
             <div className="header-container">
@@ -26,24 +34,21 @@ export default function Home() {
               <div className="header-content">
                 <p className="text-xl text-gray-600">Aspiring AI</p>
                 <p className="">"Consistence is key to success"</p>
-                <h1 className="heading-1 animated-text">Hoang Minh Khoi</h1>
+                <h1 className="heading-1 animated-text">{authorName}</h1>
                 <div className="mt-4"></div>
               </div>
             </div>
             <div className="mt-4">
               <p>
                 Email:{" "}
-                <a href="hoangminhkhoi3018@gmail.com" className="text-blue-500">
-                  hoangminhkhoi3108@gmail.com
+                <a href="example@gmail.com" className="text-blue-500">
+                  {authorEmail}
                 </a>
               </p>
-              <p>Phone: 0422296339 </p>
+              <p>Phone: {authorPhone} </p>
               <p>
                 LinkedIn:{" "}
-                <a
-                  href="https://www.linkedin.com/in/tom-hoang-3a99ba319/"
-                  className="text-blue-500"
-                >
+                <a href="https://www.linkedin.com/" className="text-blue-500">
                   Tom Hoang
                 </a>
               </p>

@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import { GoogleGenerativeAI } from "@google/generative-ai";
 import promptTemplate from "../templates/prompt.tmpl";
+import { useChat } from "./chatContent";
 
 // Initialize Google Generative AI with your API key
 const genAI = new GoogleGenerativeAI(
@@ -10,12 +11,9 @@ const genAI = new GoogleGenerativeAI(
 
 export default function ChatBox() {
   const [isOpen, setIsOpen] = useState(false);
-  const [messages, setMessages] = useState<{ text: string; isBot: boolean }[]>(
-    []
-  );
+  const { messages, setMessages } = useChat();
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
-
   const generateResponse = async (userInput: string) => {
     try {
       const prompt = `${promptTemplate}\nUser: ${userInput}`;
@@ -50,33 +48,47 @@ export default function ChatBox() {
       {!isOpen ? (
         <button
           onClick={() => setIsOpen(true)}
-          className="bg-blue-600 text-white p-4 rounded-full shadow-lg hover:bg-blue-700"
+          className="bg-teal-600 text-white p-4 rounded-full shadow-lg hover:bg-teal-700"
         >
           💬
         </button>
       ) : (
-        <div className="bg-white w-80 h-96 rounded-lg shadow-xl flex flex-col">
-          <div className="p-4 bg-blue-600 text-white rounded-t-lg flex justify-between items-center">
+        <div
+          className="bg-teal-50 rounded-lg shadow-xl flex flex-col resize overflow-auto"
+          style={{
+            minWidth: "280px",
+            minHeight: "300px",
+            maxWidth: "600px",
+            maxHeight: "800px",
+            width: "600px",
+            height: "800px",
+          }}
+        >
+          <div className="p-4 bg-teal-600 text-white rounded-t-lg flex justify-between items-center">
             <h3>AI Assistant</h3>
             <button onClick={() => setIsOpen(false)}>×</button>
           </div>
-          <div className="flex-1 p-4 overflow-y-auto">
+          <div className="flex-1 p-4 overflow-y-auto space-y-4">
             {messages.map((msg, i) => (
               <div
                 key={i}
-                className={`mb-2 ${msg.isBot ? "text-left" : "text-right"}`}
+                className={`flex ${
+                  msg.isBot ? "justify-start" : "justify-end"
+                } mb-3`}
               >
-                <span
-                  className={`inline-block p-2 rounded-lg ${
-                    msg.isBot ? "bg-gray-200" : "bg-blue-100"
+                <div
+                  className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                    msg.isBot
+                      ? "bg-teal-100 rounded-tl-none"
+                      : "bg-teal-500 text-white rounded-tr-none"
                   }`}
                 >
                   {msg.text}
-                </span>
+                </div>
               </div>
             ))}
             {isLoading && (
-              <div className="text-center">
+              <div className="text-center mt-2  ">
                 <span className="animate-pulse">Typing...</span>
               </div>
             )}
@@ -94,7 +106,7 @@ export default function ChatBox() {
               <button
                 type="submit"
                 disabled={isLoading}
-                className="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 disabled:opacity-50"
+                className="bg-teal-600 text-white px-4 py-2 rounded hover:bg-teal-700 disabled:opacity-50"
               >
                 Send
               </button>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import ChatBox from "./chatbox";
 
 export default function Header() {
   return (
@@ -44,6 +45,7 @@ export default function Header() {
           </ul>
         </nav>
       </div>
+      <ChatBox />
     </header>
   );
 }

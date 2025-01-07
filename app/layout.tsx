@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./global.css";
 import { Space_Mono } from "next/font/google";
+import { ChatProvider } from "./components/chatContent";
 
 const spaceMono = Space_Mono({
   subsets: ["latin"],
@@ -31,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className="min-h-screen bg-[#232325] text-gray-900">
-        {children}
+        <ChatProvider>{children}</ChatProvider>
       </body>
     </html>
   );

@@ -10,6 +10,9 @@
   --accent: #060679;
 }
 /* Layout */
+.resize {
+  resize: both;
+}
 .header-container {
   display: flex;
   align-items: center;

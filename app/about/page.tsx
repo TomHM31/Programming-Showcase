@@ -45,22 +45,22 @@ export default function About() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {[
               {
-                title: "Achievement 1",
-                date: "January 2024",
+                title: "IBM Machine Learning with Python",
+                date: "15 January 2025",
                 icon: GrAchievement,
-                description: "Description of achievement 1",
+                description: "Complete Machine Learning course by IBM",
               },
               {
-                title: "Achievement 2",
-                date: "March 2024",
+                title: "Azure AI completion certificate",
+                date: "22 December 2024",
                 icon: GrAchievement,
-                description: "Description of achievement 2",
+                description: "Complete Azure AI Engineer Course",
               },
               {
-                title: "Achievement 3",
-                date: "May 2024",
+                title: "IBM Generative AI Engineering",
+                date: "10 Feb 2024",
                 icon: GrAchievement,
-                description: "Description of achievement 3",
+                description: "Tackle GenAI certificate by IBM",
               },
             ].map((achievement, index) => (
               <div
