@@ -1,47 +1,71 @@
-# AI Chat Application
+# Programming Portfolio Showcase
 
-A modern chat application built with Next.js and Google's Gemini AI.
+A modern web portfolio showcasing various programming projects across machine learning, game development, and AI applications.
 
-## Features
+## 🚀 Featured Projects
 
-- Real-time chat interface
-- AI-powered responses using Gemini
-- Responsive design
-- Context-aware conversations
+### Lost in Space
+- 2D space exploration game
+- Built with C++
+- Features real-time physics and infinite exploration
+- [View Project](https://github.com/TomHM31/LostinSpace)
 
-## Prerequisites
+### AI Chatbox
+- Gemini-powered chat interface
+- Natural language processing
+- Modern responsive design
+- [View Project](https://github.com/TomHM31/AI-Chatbox)
 
-- Node.js 18+ installed
-- Google Gemini API key
+### Machine Learning Pipeline
+- Predictive analytics solution
+- Deep learning implementation
+- Feature engineering & model optimization
+- [View Project](https://github.com/TomHM31/Develop-ML)
 
-## Setup
+### xDeepFM Replication
+- Research paper implementation
+- Recommender systems
+- Based on Microsoft Research work
+- [View Project](https://github.com/TomHM31/xDeepFM-Replication)
 
-1. Clone the repository:
+## 🛠️ Tech Stack
+- Next.js 13
+- React
+- TypeScript
+- Tailwind CSS
+- C++
+- Python
+- TensorFlow
+
+## 📦 Installation
 
 ```bash
-git clone https://github.com/hoangminhkhoi3108/Programming-Showcase.git
+# Clone repository
+git clone https://github.com/YourUsername/Programming-Showcase.git
+
+# Install dependencies
 cd Programming-Showcase
-```
-
-## Install dependencies
-
-```bash
 npm install
-```
 
-## Replace Gemini API Key with your key
-
-- Go to .env.local
-- Replace 'your_api_key_here' with your actual Google Gemini API key
-
-## Start development server
-
-```bash
+# Run development server
 npm run dev
 ```
+## 🖥️ Local Development
+``` bash
+# Start development server
+npm run dev
 
-## View Application
+# Build for production
+npm run build
 
-- Open your browser and navigate to http://localhost:3000
-- Test responsive layout using browser DevTools (F12)
-- Engage with the chat interface to see AI-powered responses in action
+# Start production server
+npm run start
+```
+## 🚀 Deployment
+Deployed and demo on Vercel: https://programming-showcase-new.vercel.app
+
+## 📝 License
+Please always refer to the orignal author
+
+## 📫 Contact
+hoangminhkhoi3108@gmail.com
