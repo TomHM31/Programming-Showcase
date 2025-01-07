@@ -61,7 +61,7 @@ export default function ChatBox() {
             maxWidth: "600px",
             maxHeight: "800px",
             width: "600px",
-            height: "800px",
+            height: "700px",
           }}
         >
           <div className="p-4 bg-teal-600 text-white rounded-t-lg flex justify-between items-center">
