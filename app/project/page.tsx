@@ -17,7 +17,7 @@ export default function Dashboard() {
           <div className="bg-zinc-700 text-white p-6 rounded-lg fade-up  ">
             <h2 className="text-xl font-semibold mb-4">Lost In Space</h2>
             <div className="flex flex-row items-start gap-10">
-              <Link href="https://gradienty.codes/animations">
+              <Link href="https://github.com/TomHM31/LostinSpace">
                 <Image
                   src={gaming}
                   width={400}
@@ -37,7 +37,9 @@ export default function Dashboard() {
                   <p className="mt-3">Written in C++</p>
                 </div>
                 <div className="mt-40 flex justify-center">
-                  <button className="btn-grad ">View Project</button>
+                  <Link href="https://github.com/TomHM31/LostinSpace">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -46,7 +48,7 @@ export default function Dashboard() {
           <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
             <h2 className="text-xl font-semibold mb-4">AI Chatbox</h2>
             <div className="flex flex-row items-start gap-10">
-              <Link href="https://gradienty.codes/animations">
+              <Link href="https://github.com/TomHM31/AI-Chatbox">
                 <Image
                   src={coding}
                   width={400}
@@ -66,7 +68,9 @@ export default function Dashboard() {
                   <p className="mt-2">Built with Next.js and TypeScript</p>
                 </div>
                 <div className="mt-40 flex justify-center">
-                  <button className="btn-grad ">View Project</button>
+                  <Link href="https://github.com/TomHM31/AI-Chatbox">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
                 </div>
               </div>
             </div>
@@ -75,7 +79,7 @@ export default function Dashboard() {
           <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
             <h2 className="text-xl font-semibold mb-4">Develop ML Solution</h2>
             <div className="flex flex-row items-start gap-10">
-              <Link href="https://gradienty.codes/animations">
+              <Link href="https://github.com/TomHM31/Develop-ML">
                 <Image
                   src={rocket}
                   width={400}
@@ -99,9 +103,9 @@ export default function Dashboard() {
                   </p>
                   <p className="mt-2">Built with Python</p>
                 </div>
-                <div className="mt-40 flex justify-center">
+                <Link href="https://github.com/TomHM31/Develop-ML">
                   <button className="btn-grad ">View Project</button>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
@@ -132,9 +136,9 @@ export default function Dashboard() {
                     Python, PyTorch, and statistical analysis
                   </p>
                 </div>
-                <div className="mt-40 flex justify-center">
+                <Link href="https://github.com/TomHM31/AI-Chatbox">
                   <button className="btn-grad ">View Project</button>
-                </div>
+                </Link>
               </div>
             </div>
           </div>
