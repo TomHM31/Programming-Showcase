@@ -1,5 +1,5 @@
 import Image from "next/image";
-import profileImage from "../images/1.png";
+import profileImage from "../images/me.jpg";
 import { GrAchievement } from "react-icons/gr";
 // import achievement1 from "../images/achievement1.png";
 // import achievement2 from "../images/achievement2.png";
