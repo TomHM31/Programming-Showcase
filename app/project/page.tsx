@@ -27,7 +27,7 @@ export default function Dashboard() {
                 />
               </Link>
               <div className="flex-1 flex-col h-full">
-                <div>
+                <div className="space-y-5">
                   <p className="">"A 2-D space exploration"</p>
                   <p className="mt-3">Infinite exploration</p>
                   <p className="mt-3">
@@ -58,7 +58,7 @@ export default function Dashboard() {
                 />
               </Link>
               <div className="flex-1 flex-col h-full">
-                <div>
+                <div className="space-y-5">
                   <p className="">"Chatbox powered by Gemini "</p>
                   <p className="mt-2">
                     Natural language processing capabilities
@@ -89,7 +89,7 @@ export default function Dashboard() {
                 />
               </Link>
               <div className="flex-1 flex-col h-full">
-                <div>
+                <div className="space-y-1">
                   <p className="">
                     "Machine learning pipeline for predictive analytics"
                   </p>
@@ -103,9 +103,11 @@ export default function Dashboard() {
                   </p>
                   <p className="mt-2">Built with Python</p>
                 </div>
-                <Link href="https://github.com/TomHM31/Develop-ML">
-                  <button className="btn-grad ">View Project</button>
-                </Link>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/Develop-ML">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -113,7 +115,7 @@ export default function Dashboard() {
           <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
             <h2 className="text-xl font-semibold mb-4">xDeepFM Replication</h2>
             <div className="flex flex-row items-start gap-10">
-              <Link href="https://gradienty.codes/animations">
+              <Link href="https://github.com/TomHM31/xDeepFM-Replication">
                 <Image
                   src={potato}
                   width={400}
@@ -123,7 +125,7 @@ export default function Dashboard() {
                 />
               </Link>
               <div className="flex-1 flex-col h-full">
-                <div>
+                <div className="space-y-5">
                   <p className="mt-2">"Hyperparameter tuning experiments"</p>
                   <p className="mt-2">
                     Optimizing CIN layers, incoperating dynamic feature
@@ -136,9 +138,11 @@ export default function Dashboard() {
                     Python, PyTorch, and statistical analysis
                   </p>
                 </div>
-                <Link href="https://github.com/TomHM31/AI-Chatbox">
-                  <button className="btn-grad ">View Project</button>
-                </Link>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/xDeepFM-Replication">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
