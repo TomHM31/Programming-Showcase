@@ -29,7 +29,7 @@ export default function Dashboard() {
                 />
               </Link>
               <div className="flex-1 flex-col h-full">
-                <div className="space-y-5">
+                <div className="space-y-5 text-lg">
                   <p className="">"A 2-D space exploration"</p>
                   <p className="mt-3">Infinite exploration</p>
                   <p className="mt-3">
@@ -60,7 +60,7 @@ export default function Dashboard() {
                 />
               </Link>
               <div className="flex-1 flex-col h-full">
-                <div className="space-y-5">
+                <div className="space-y-5 text-lg">
                   <p className="">"Chatbox powered by Gemini "</p>
                   <p className="mt-2">
                     Natural language processing capabilities
@@ -91,7 +91,7 @@ export default function Dashboard() {
                 />
               </Link>
               <div className="flex-1 flex-col h-full">
-                <div className="space-y-1">
+                <div className="space-y-1 text-lg">
                   <p className="">
                     "Machine learning pipeline for predictive analytics"
                   </p>
@@ -127,7 +127,7 @@ export default function Dashboard() {
                 />
               </Link>
               <div className="flex-1 flex-col h-full">
-                <div className="space-y-5">
+                <div className="space-y-5 text-lg">
                   <p className="mt-2">"Hyperparameter tuning experiments"</p>
                   <p className="mt-2">
                     Optimizing CIN layers, incoperating dynamic feature
@@ -140,9 +140,80 @@ export default function Dashboard() {
                     Python, PyTorch, and statistical analysis
                   </p>
                 </div>
-                <Link href="https://github.com/TomHM31/AI-Chatbox">
-                  <button className="btn-grad ">View Project</button>
-                </Link>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/xDeepFM-Replication">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
+            <h2 className="text-xl font-semibold mb-4">
+              Multi-Agent Game Generator
+            </h2>
+            <div className="flex flex-row items-start gap-10">
+              <Link href="https://github.com/TomHM31/Multi-Agent-Game-Generator">
+                <Image
+                  src={agent}
+                  width={400}
+                  height={150}
+                  alt="Game Generator"
+                  className="image-vibrate"
+                />
+              </Link>
+              <div className="flex-1 flex-col h-full">
+                <div className="space-y-4 text-lg">
+                  <p>"Advanced Multi-Agent Environment Generation"</p>
+                  <p>
+                    Deep learning-based game environment synthesis. Able to
+                    generate Pacman & Snake game with statistical board
+                  </p>
+                  <p>Built with Python, CrewAI, Gemini</p>
+                </div>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/Multi-Agent-Game-Generator">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
+            <h2 className="text-xl font-semibold mb-4">
+              Restaurant Menu Fullstack
+            </h2>
+            <div className="flex flex-row items-start gap-10">
+              <Link href="https://github.com/TomHM31/Restaurant-Menu-FullStack">
+                <Image
+                  src={restaurant}
+                  width={400}
+                  height={150}
+                  alt="Restaurant Menu"
+                  className="image-vibrate"
+                />
+              </Link>
+              <div className="flex-1 flex-col h-full">
+                <div className="space-y-4 text-lg">
+                  <p>
+                    "Modern restaurant management system with real-time
+                    ordering"
+                  </p>
+                  <p>
+                    Elegant UI/UX design inspired by Michelin-starred
+                    establishments. Multi-table management, order tracking,
+                    saved accounts
+                  </p>
+
+                  <p>Built with React, PostgreSQL, Java Spring</p>
+                </div>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/Restaurant-Menu-FullStack">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
