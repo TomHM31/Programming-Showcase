@@ -4,6 +4,8 @@ import gaming from "../images/lost_in_space.png";
 import coding from "../images/chatbot.png";
 import rocket from "../images/rocket.png";
 import potato from "../images/tuning.png";
+import agent from "../images/multi_agent.webp";
+import restaurant from "../images/restaurant.webp";
 import Header from "../components/header";
 
 export default function Dashboard() {
@@ -53,7 +55,7 @@ export default function Dashboard() {
                   src={coding}
                   width={400}
                   height={150}
-                  alt="Lost in Space"
+                  alt="AI Chatbox"
                   className="image-vibrate"
                 />
               </Link>
@@ -103,9 +105,11 @@ export default function Dashboard() {
                   </p>
                   <p className="mt-2">Built with Python</p>
                 </div>
-                <Link href="https://github.com/TomHM31/Develop-ML">
-                  <button className="btn-grad ">View Project</button>
-                </Link>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/Develop-ML">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
@@ -113,12 +117,12 @@ export default function Dashboard() {
           <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
             <h2 className="text-xl font-semibold mb-4">xDeepFM Replication</h2>
             <div className="flex flex-row items-start gap-10">
-              <Link href="https://gradienty.codes/animations">
+              <Link href="https://github.com/TomHM31/xDeepFM-Replication">
                 <Image
                   src={potato}
                   width={400}
                   height={150}
-                  alt="Lost in Space"
+                  alt="xDeepFM"
                   className="image-vibrate"
                 />
               </Link>
@@ -136,9 +140,88 @@ export default function Dashboard() {
                     Python, PyTorch, and statistical analysis
                   </p>
                 </div>
-                <Link href="https://github.com/TomHM31/AI-Chatbox">
-                  <button className="btn-grad ">View Project</button>
-                </Link>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/xDeepFM-Replication">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
+            <h2 className="text-xl font-semibold mb-4">
+              Multi-Agent Game Generator
+            </h2>
+            <div className="flex flex-row items-start gap-10">
+              <Link href="https://github.com/TomHM31/AI-Chatbox">
+                <Image
+                  src={agent}
+                  width={400}
+                  height={150}
+                  alt="Game Generator"
+                  className="image-vibrate"
+                />
+              </Link>
+              <div className="flex-1 flex-col h-full">
+                <div>
+                  <p className="mt-2">
+                    "Advanced Multi-Agent Environment Generation"
+                  </p>
+                  <p className="mt-2">
+                    Deep learning-based game environment synthesis
+                  </p>
+                  <p className="mt-2">
+                    Able to generate Pacman & Snake game with statistical board
+                  </p>
+                  <p className="mt-2">Built with Python, CrewAI, Gemini</p>
+                </div>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/AI-Chatbox">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
+            <h2 className="text-xl font-semibold mb-4">
+              Restaurant Menu Fullstack
+            </h2>
+            <div className="flex flex-row items-start gap-10">
+              <Link href="https://github.com/TomHM31/AI-Chatbox">
+                <Image
+                  src={restaurant}
+                  width={400}
+                  height={150}
+                  alt="Restaurant Menu"
+                  className="image-vibrate"
+                />
+              </Link>
+              <div className="flex-1 flex-col h-full">
+                <div>
+                  <p className="mt-2">
+                    "Modern restaurant management system with real-time
+                    ordering"
+                  </p>
+                  <p className="mt-2">
+                    Elegant UI/UX design inspired by Michelin-starred
+                    establishments
+                  </p>
+                  <p className="mt-2">
+                    Features: Multi-table management, order tracking, saved
+                    accounts
+                  </p>
+                  <p className="mt-2">
+                    Built with React, PostgreSQL, Java Spring
+                  </p>
+                </div>
+                <div className="mt-40 flex justify-center">
+                  <Link href="https://github.com/TomHM31/AI-Chatbox">
+                    <button className="btn-grad ">View Project</button>
+                  </Link>
+                </div>
               </div>
             </div>
           </div>
