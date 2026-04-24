@@ -29,7 +29,7 @@ export default function About() {
             <div className="text-center md:text-left">
               <h1 className="text-4xl font-bold mb-4">Hello, I'm Tom</h1>
               <p className="text-xl text-gray-600 mb-4">
-                Third Year Student At Deakin University{" "}
+                Master of AI At Deakin University{" "}
               </p>
               <p className="text-white-500 max-w-2xl">
                 Hello! I'm currently a first-year student at Deakin University,

@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./global.css";
 import { JetBrains_Mono } from "next/font/google";
 import { ChatProvider } from "./components/chatContent";
+import { Analytics } from "@vercel/analytics/next";
 
 const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -36,6 +37,7 @@ export default function RootLayout({
         className={`${jetbrainsMono.variable} min-h-screen bg-[#0d0d0d] text-[rgba(242,243,245,0.92)]`}
       >
         <ChatProvider>{children}</ChatProvider>
+        <Analytics />
       </body>
     </html>
   );
