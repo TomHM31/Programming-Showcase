@@ -39,6 +39,8 @@ export default function Home() {
                 src={portrait}
                 alt="Picture of the author"
                 className="profile-image"
+                width={200}
+                height={200}
               />
               <div className="header-content">
                 <p className="text-xl text-gray-600">Aspiring AI</p>

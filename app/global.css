@@ -47,9 +47,15 @@ body {
   margin-top: 8rem;
 }
 .profile-image {
-  width: 160px;
-  height: 150;
-  border-radius: 90%;
+  width: 150;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Ensure headings are readable inside the white resume card */
+.content-box .heading-1 {
+  color: #0f172a;
 }
 .container {
   min-height: 100vh;
