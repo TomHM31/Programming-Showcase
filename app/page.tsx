@@ -1,28 +1,37 @@
-import Head from "next/head";
-import Link from "next/link";
 import Image from "next/image";
 import portrait from "./images/portrait.jpg";
-import ChatBox from "./components/chatbox";
 import Header from "./components/header";
+import TerminalHero from "./components/TerminalHero";
+import AIChat from "./components/AIChat";
 
 export default function Home() {
-  const authorName = process.env.NEXT_PUBLIC_AUTHOR_NAME ?? "Author Name";
+  const authorName = process.env.NEXT_PUBLIC_AUTHOR_NAME ?? "Hoang Minh Khoi";
   const authorEmail =
     process.env.NEXT_PUBLIC_AUTHOR_EMAIL ?? "example@example.com";
   const authorPhone = process.env.NEXT_PUBLIC_AUTHOR_PHONE ?? "000-000-0000";
   const linkedInText =
     process.env.NEXT_PUBLIC_AUTHOR_LINKEDIN_TEXT ?? "LinkedIn Profile";
   const linkedInUrl =
-    process.env.NEXT_PUBLIC_AUTHOR_LINKEDIN_URL ?? "https://www.linkedin.com/";
+    process.env.NEXT_PUBLIC_AUTHOR_LINKEDIN_URL ??
+    "https://www.linkedin.com/in/tom-hoang3108/";
+  const resumeText =
+    process.env.NEXT_PUBLIC_RESUME_TEXT ?? "[paste your resume text here]";
   return (
-    <div className="min-h-screen bg-gray p-6 font-mono ">
+    <div className="min-h-screen p-6">
       <Header />
-      <div className="hero-section text-white text-center">
-        <h1 className="text-5xl font-bold">Welcome to My Portfolio</h1>
-        <p className="text-xl">Explore my work and experience in AI</p>
+      <div className="home-hero-stack">
+        <TerminalHero
+          name={authorName}
+          onViewWorkHref="/project"
+          onChatHref="#ai-chat"
+        />
+        <div className="hero-section home-hero-banner text-white text-center">
+          <h1 className="text-5xl font-bold">Welcome to My Portfolio</h1>
+          <p className="text-xl">Explore my work and experience in AI</p>
+        </div>
+        <AIChat resumeText={resumeText} />
       </div>
-      <div className="content-wrapper mt-32">
-        {/* <ChatBox /> */}
+      <div className="content-wrapper mt-20">
         <div className="content-box">
           <section className="mb-8">
             <div className="header-container">
@@ -41,15 +50,15 @@ export default function Home() {
             <div className="mt-4">
               <p>
                 Email:{" "}
-                <a href="example@gmail.com" className="text-blue-500">
-                  {authorEmail}
+                <a href="whyareyouspamming@gmail.com" className="text-blue-500">
+                  hoangminhkhoi3108@gmail.com
                 </a>
               </p>
               <p>Phone: {authorPhone} </p>
               <p>
                 LinkedIn:{" "}
-                <a href="https://www.linkedin.com/" className="text-blue-500">
-                  Tom Hoang
+                <a href={linkedInUrl} className="text-blue-500">
+                  {linkedInText}
                 </a>
               </p>
             </div>

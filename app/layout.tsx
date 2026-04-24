@@ -1,12 +1,13 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./global.css";
-import { Space_Mono } from "next/font/google";
+import { JetBrains_Mono } from "next/font/google";
 import { ChatProvider } from "./components/chatContent";
 
-const spaceMono = Space_Mono({
+const jetbrainsMono = JetBrains_Mono({
   subsets: ["latin"],
   weight: ["400", "700"],
+  variable: "--font-jetbrains-mono",
 });
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -31,7 +32,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="min-h-screen bg-[#232325] text-gray-900">
+      <body
+        className={`${jetbrainsMono.variable} min-h-screen bg-[#0d0d0d] text-[rgba(242,243,245,0.92)]`}
+      >
         <ChatProvider>{children}</ChatProvider>
       </body>
     </html>

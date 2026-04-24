@@ -3,6 +3,23 @@
 @tailwind utilities;
 
 :root {
+  --surface: #1a1a1a;
+  --bg: #0d0d0d;
+  --accent: #00e5ff;
+}
+
+html,
+body {
+  background: var(--bg);
+}
+
+body {
+  font-family:
+    var(--font-jetbrains-mono), ui-monospace, SFMono-Regular, Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+:root {
   --text: #f2f3f5;
   --background: #f2f3f5;
   --primary: #121212;
@@ -199,10 +216,12 @@
   background-color: white;
   padding: 2rem;
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  color: #0f172a;
 }
 
 .content-box:hover {
-  animation: wobble-hor-bottom 0.8s ease 0s 1 normal both;
+  /* animation: wobble-hor-bottom 0.8s ease 0s 1 normal both; */
+  opacity: 1;
 }
 /* Add hover effect to header */
 @keyframes wobble-hor-bottom {
@@ -338,7 +357,8 @@ header li a {
 
 .blue-beauty {
   background-color: #008dda;
-  background-image: radial-gradient(at 53% 20%, #008dda 0%, transparent 60%),
+  background-image:
+    radial-gradient(at 53% 20%, #008dda 0%, transparent 60%),
     radial-gradient(at 11% 70%, #41c9e2 0%, transparent 50%),
     radial-gradient(at 41% 32%, #ace2e1 0%, transparent 40%),
     radial-gradient(at 99% 29%, #f7eedd 0%, transparent 30%);
@@ -355,6 +375,446 @@ header li a {
 
   /* Light text on dark background */
   color: #f3f4f6; /* or #fff */
+}
+
+.home-hero-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+/* Homepage variant: same look, tighter spacing (avoids double-padding with terminal/chat) */
+.home-hero-banner {
+  margin-top: 0;
+  padding: 60px 2rem;
+}
+
+/* ---------- TerminalHero (moved from CSS module) ---------- */
+.terminalHero__wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 150px 16px 16px;
+}
+
+.terminalHero__terminal {
+  width: min(980px, 100%);
+  border-radius: 18px;
+  background: #0d0d0d;
+  border: 1px solid rgba(0, 229, 255, 0.18);
+  box-shadow:
+    0 0 0 1px rgba(0, 229, 255, 0.06),
+    0 16px 60px rgba(0, 0, 0, 0.6),
+    0 0 42px rgba(0, 229, 255, 0.08);
+  position: relative;
+  overflow: hidden;
+}
+
+.terminalHero__scanlines {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.03),
+    rgba(255, 255, 255, 0.03) 1px,
+    rgba(0, 0, 0, 0) 3px,
+    rgba(0, 0, 0, 0) 7px
+  );
+  opacity: 0.2;
+  mix-blend-mode: overlay;
+}
+
+.terminalHero__topbar {
+  display: grid;
+  grid-template-columns: 130px 1fr 130px;
+  align-items: center;
+  padding: 12px 14px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.06),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.terminalHero__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.terminalHero__dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35) inset;
+}
+
+.terminalHero__dotRed {
+  background: #ff5f57;
+}
+.terminalHero__dotYellow {
+  background: #febc2e;
+}
+.terminalHero__dotGreen {
+  background: #28c840;
+}
+
+.terminalHero__title {
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.02em;
+  color: rgba(255, 255, 255, 0.55);
+  user-select: none;
+}
+
+.terminalHero__spacer {
+  height: 1px;
+}
+
+.terminalHero__body {
+  padding: 22px 20px 20px;
+}
+
+.terminalHero__line {
+  color: rgba(242, 243, 245, 0.88);
+  font-size: 14px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.terminalHero__nameLine {
+  margin-top: 8px;
+  font-size: 22px;
+  font-weight: 800;
+  color: #ffffff;
+  text-shadow: 0 0 18px rgba(0, 229, 255, 0.12);
+}
+
+.terminalHero__roleLine {
+  font-size: 16px;
+  font-weight: 700;
+  color: #00e5ff;
+}
+
+.terminalHero__lineText {
+  display: inline;
+}
+
+.terminalHero__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: #00e5ff;
+  animation: terminalHeroBlink 1s steps(2, end) infinite;
+}
+
+@keyframes terminalHeroBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.terminalHero__ctas {
+  display: flex;
+  gap: 12px;
+  margin-top: 18px;
+  flex-wrap: wrap;
+}
+
+.terminalHero__ctasHidden {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
+}
+
+.terminalHero__ctasVisible {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 520ms ease,
+    transform 520ms ease;
+}
+
+.terminalHero__btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 14px;
+  border-radius: 12px;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  transition:
+    transform 140ms ease,
+    box-shadow 140ms ease,
+    background 140ms ease,
+    border-color 140ms ease,
+    color 140ms ease;
+}
+
+.terminalHero__btnSolid {
+  background: rgba(0, 229, 255, 0.95);
+  color: #001418;
+  box-shadow: 0 0 24px rgba(0, 229, 255, 0.2);
+}
+
+.terminalHero__btnOutline {
+  background: transparent;
+  color: rgba(242, 243, 245, 0.95);
+  border: 1px solid rgba(0, 229, 255, 0.55);
+  box-shadow: 0 0 18px rgba(0, 229, 255, 0.09);
+}
+
+.terminalHero__btn:hover {
+  transform: translateY(-1px);
+}
+
+.terminalHero__btnSolid:hover {
+  box-shadow: 0 0 34px rgba(0, 229, 255, 0.26);
+}
+
+.terminalHero__btnOutline:hover {
+  border-color: rgba(0, 229, 255, 0.85);
+  box-shadow: 0 0 28px rgba(0, 229, 255, 0.16);
+  color: #ffffff;
+}
+
+/* ---------- AIChat (moved from CSS module) ---------- */
+.aiChat__wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  padding: 16px 16px 72px;
+}
+
+.aiChat__card {
+  width: min(680px, 100%);
+  background: #1a1a1a;
+  border: 1px solid rgba(0, 229, 255, 0.25);
+  border-radius: 18px;
+  box-shadow:
+    0 0 0 1px rgba(0, 229, 255, 0.06),
+    0 18px 70px rgba(0, 0, 0, 0.55),
+    0 0 50px rgba(0, 229, 255, 0.1);
+  padding: 16px;
+  position: relative;
+  overflow: hidden;
+}
+
+.aiChat__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 6px 10px;
+}
+
+.aiChat__title {
+  font-weight: 900;
+  color: rgba(255, 255, 255, 0.95);
+  letter-spacing: 0.01em;
+}
+
+.aiChat__subtitle {
+  margin-top: 3px;
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.aiChat__thinking {
+  height: 20px;
+  width: 20px;
+  display: grid;
+  place-items: center;
+  margin-top: 4px;
+}
+
+.aiChat__pulseDot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent, #00e5ff);
+  box-shadow: 0 0 22px rgba(0, 229, 255, 0.35);
+  animation: aiChatPulse 1s ease-in-out infinite;
+}
+
+@keyframes aiChatPulse {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.65;
+  }
+  50% {
+    transform: scale(1.45);
+    opacity: 1;
+  }
+}
+
+.aiChat__suggested {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 4px 4px 12px;
+}
+
+.aiChat__chip {
+  border: 1px solid rgba(0, 229, 255, 0.28);
+  background: rgba(0, 229, 255, 0.06);
+  color: rgba(255, 255, 255, 0.86);
+  padding: 8px 10px;
+  border-radius: 999px;
+  font-size: 12px;
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    border-color 120ms ease,
+    background 120ms ease;
+}
+
+.aiChat__chip:hover {
+  transform: translateY(-1px);
+  border-color: rgba(0, 229, 255, 0.6);
+  background: rgba(0, 229, 255, 0.1);
+}
+
+.aiChat__chip:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.aiChat__messages {
+  margin-top: 6px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 14px;
+  padding: 12px;
+  max-height: 360px;
+  overflow: auto;
+}
+
+.aiChat__msg {
+  padding: 10px 10px;
+  border-radius: 12px;
+}
+
+.aiChat__msg + .aiChat__msg {
+  margin-top: 10px;
+}
+
+.aiChat__userMsg {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.aiChat__aiMsg {
+  background: rgba(0, 229, 255, 0.06);
+  border: 1px solid rgba(0, 229, 255, 0.18);
+}
+
+.aiChat__msgRole {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.55);
+  margin-bottom: 6px;
+  letter-spacing: 0.02em;
+}
+
+.aiChat__msgText {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 13px;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.aiChat__cursor {
+  display: inline-block;
+  margin-left: 2px;
+  color: var(--accent, #00e5ff);
+  animation: aiChatBlink 1s steps(2, end) infinite;
+}
+
+@keyframes aiChatBlink {
+  0%,
+  49% {
+    opacity: 1;
+  }
+  50%,
+  100% {
+    opacity: 0;
+  }
+}
+
+.aiChat__error {
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  background: rgba(255, 95, 87, 0.12);
+  border: 1px solid rgba(255, 95, 87, 0.22);
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 12px;
+}
+
+.aiChat__inputRow {
+  display: flex;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.aiChat__input {
+  flex: 1;
+  height: 42px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.35);
+  color: rgba(255, 255, 255, 0.92);
+  padding: 0 12px;
+  outline: none;
+}
+
+.aiChat__input:focus {
+  border-color: rgba(0, 229, 255, 0.55);
+  box-shadow: 0 0 0 3px rgba(0, 229, 255, 0.12);
+}
+
+.aiChat__send {
+  height: 42px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 229, 255, 0.55);
+  background: rgba(0, 229, 255, 0.92);
+  color: #001418;
+  font-weight: 900;
+  cursor: pointer;
+  transition:
+    transform 120ms ease,
+    box-shadow 120ms ease,
+    opacity 120ms ease;
+  box-shadow: 0 0 22px rgba(0, 229, 255, 0.18);
+}
+
+.aiChat__send:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 0 34px rgba(0, 229, 255, 0.24);
+}
+
+.aiChat__send:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.aiChat__powered {
+  position: absolute;
+  right: 14px;
+  bottom: 12px;
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
 }
 
 .hero-section::before {
@@ -397,5 +857,35 @@ header li a {
 
   .hero-section h1 {
     font-size: 2.5rem;
+  }
+
+  .home-hero-stack {
+    gap: 20px;
+  }
+
+  .home-hero-banner {
+    padding: 44px 1rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .terminalHero__wrap {
+    padding-top: 60px;
+  }
+
+  .terminalHero__body {
+    padding: 18px 14px 16px;
+  }
+
+  .terminalHero__nameLine {
+    font-size: 19px;
+  }
+
+  .terminalHero__ctas {
+    gap: 10px;
+  }
+
+  .terminalHero__btn {
+    width: 100%;
   }
 }

@@ -1,5 +1,9 @@
 import Image from "next/image";
 import profileImage from "../images/me.jpg";
+import goldcoast from "../images/goldcoast.png";
+import music from "../images/image3.png";
+import gaming from "../images/image2.png";
+import gym from "../images/image1.png";
 import { GrAchievement } from "react-icons/gr";
 // import achievement1 from "../images/achievement1.png";
 // import achievement2 from "../images/achievement2.png";
@@ -28,8 +32,8 @@ export default function About() {
                 Third Year Student At Deakin University{" "}
               </p>
               <p className="text-white-500 max-w-2xl">
-                Hello! I'm currently a third-year student at Deakin University,
-                pursuing a Bachelor of Artificial Intelligence. My studies focus
+                Hello! I'm currently a first-year student at Deakin University,
+                pursuing a Master of Artificial Intelligence. My studies focus
                 on developing innovative AI solutions and understanding the
                 ethical implications of AI technologies. I'm passionate about
                 leveraging AI to solve real-world problems and enhance everyday
@@ -87,7 +91,7 @@ export default function About() {
             {/* Gym */}
             <div className="flex flex-col items-center">
               <Image
-                src="/images/1.png"
+                src={gym}
                 alt="Gym"
                 width={200}
                 height={200}
@@ -99,7 +103,7 @@ export default function About() {
             {/* Gaming */}
             <div className="flex flex-col items-center">
               <Image
-                src="/images/gaming.jpg"
+                src={gaming}
                 alt="Gaming"
                 width={200}
                 height={200}
@@ -111,7 +115,7 @@ export default function About() {
             {/* Music */}
             <div className="flex flex-col items-center">
               <Image
-                src="/images/music.jpg"
+                src={music}
                 alt="Music"
                 width={200}
                 height={200}
@@ -123,7 +127,7 @@ export default function About() {
             {/* Photography */}
             <div className="flex flex-col items-center">
               <Image
-                src="/images/photography.jpg"
+                src={goldcoast}
                 alt="Photography"
                 width={200}
                 height={200}
