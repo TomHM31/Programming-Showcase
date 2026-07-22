@@ -3,6 +3,39 @@ import Header from "../components/header";
 export default function Changelog() {
   const changes = [
     {
+      date: "2026-07-20",
+      version: "1.5.0",
+      title: "New 2026 projects + custom logos",
+      changes: [
+        "Added two flagship 2026 builds — YoutoShorts and Social Notebook — to the Projects explorer",
+        "Designed custom square logo marks for projects in the site's dark/cyan style",
+        "Wired the new artwork into project cards and preview panels",
+      ],
+      type: "feature",
+    },
+    {
+      date: "2026-06-12",
+      version: "1.4.1",
+      title: "Home & README refresh",
+      changes: [
+        "Refreshed the home page Featured Projects to spotlight the latest three builds",
+        "Updated the README with all eight projects and corrected image assets",
+        "Standardized project image filenames across the codebase",
+      ],
+      type: "enhancement",
+    },
+    {
+      date: "2026-05-18",
+      version: "1.4.0",
+      title: "Projects explorer redesign",
+      changes: [
+        "Rebuilt the Projects page with hover-to-preview panels and category filters",
+        "Added live preview cards with pinning and keyboard navigation",
+        "Tuned layout, spacing, and accessibility across breakpoints",
+      ],
+      type: "feature",
+    },
+    {
       date: "2026-04-24",
       version: "1.3.3",
       title: "Changelog + spacing polish",

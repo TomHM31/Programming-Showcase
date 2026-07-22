@@ -22,7 +22,7 @@
 - 🤖 **Live AI chat** — integrated with both Google Gemini and Anthropic Claude
 - 🎨 **Fully responsive** UI styled with Tailwind CSS and custom Geist fonts
 - 📊 **Analytics-ready** via Vercel Analytics
-- 🧩 **Six real projects** across games, ML research, and full-stack apps
+- 🧩 **Eight real projects** across AI apps, video pipelines, games, ML research, and full-stack builds
 
 ---
 
@@ -31,15 +31,31 @@
 <table>
   <tr>
     <td width="50%" valign="top">
+      <h3>🎬 YoutoShorts <sub><code>NEW</code></sub></h3>
+      <img src="app/images/youtoshorts.png" width="100%" alt="YoutoShorts" /><br/>
+      Turns any YouTube video into ranked viral Shorts — LLM clip picking, face tracking, and karaoke captions, fully automated. Also generates long-form videos and researches trending niches.<br/><br/>
+      <b>Stack:</b> Python · FastAPI · faster-whisper · ffmpeg · MediaPipe<br/>
+      <a href="https://github.com/TomHM31">→ View Project</a>
+    </td>
+    <td width="50%" valign="top">
+      <h3>📓 Social Notebook <sub><code>NEW</code></sub></h3>
+      <img src="app/images/social-notebook.png" width="100%" alt="Social Notebook" /><br/>
+      NotebookLM for your social feeds — paste Instagram, Facebook, or YouTube links and chat with cited answers grounded in your saved content.<br/><br/>
+      <b>Stack:</b> Next.js · FastAPI · Gemini · SQLite<br/>
+      <a href="https://github.com/TomHM31">→ View Project</a>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
       <h3>🛸 Lost in Space</h3>
-      <img src="app/images/lost_in_space.png" width="100%" alt="Lost in Space" /><br/>
+      <img src="app/images/lost-in-space.png" width="100%" alt="Lost in Space" /><br/>
       A 2-D space exploration game with infinite exploration, multiple weapon systems, and power-ups.<br/><br/>
       <b>Stack:</b> C++<br/>
       <a href="https://github.com/TomHM31/LostinSpace">→ View Project</a>
     </td>
     <td width="50%" valign="top">
       <h3>💬 AI Chatbox</h3>
-      <img src="app/images/chatbot.png" width="100%" alt="AI Chatbox" /><br/>
+      <img src="app/images/ai-chatbox.png" width="100%" alt="AI Chatbox" /><br/>
       A Gemini-powered chat interface with context-aware responses and custom prompt engineering.<br/><br/>
       <b>Stack:</b> Next.js · TypeScript · Gemini<br/>
       <a href="https://github.com/TomHM31/AI-Chatbox">→ View Project</a>
@@ -48,14 +64,14 @@
   <tr>
     <td width="50%" valign="top">
       <h3>🧠 Multi-Agent Game Generator</h3>
-      <img src="app/images/multi_agent.webp" width="100%" alt="Multi-Agent Game Generator" /><br/>
+      <img src="app/images/multiagent-game.png" width="100%" alt="Multi-Agent Game Generator" /><br/>
       Advanced multi-agent environment generation for automated game creation.<br/><br/>
       <b>Stack:</b> Python · CrewAI · Gemini<br/>
       <a href="https://github.com/TomHM31/Multi-Agent-Game-Generator">→ View Project</a>
     </td>
     <td width="50%" valign="top">
       <h3>🍽️ Restaurant Menu — Full Stack</h3>
-      <img src="app/images/restaurant.webp" width="100%" alt="Restaurant Menu Full Stack" /><br/>
+      <img src="app/images/restaurant-menu.png" width="100%" alt="Restaurant Menu Full Stack" /><br/>
       A full-stack restaurant menu application with a relational backend and REST API.<br/><br/>
       <b>Stack:</b> React · Java Spring · PostgreSQL<br/>
       <a href="https://github.com/TomHM31/Restaurant-Menu-FullStack">→ View Project</a>
@@ -64,14 +80,14 @@
   <tr>
     <td width="50%" valign="top">
       <h3>📈 xDeepFM Replication</h3>
-      <img src="app/images/tuning.png" width="100%" alt="xDeepFM Replication" /><br/>
+      <img src="app/images/xdeepfm.png" width="100%" alt="xDeepFM Replication" /><br/>
       A research-paper replication of xDeepFM for recommender systems, with hyperparameter-tuning experiments.<br/><br/>
       <b>Stack:</b> Python<br/>
       <a href="https://github.com/TomHM31/xDeepFM-Replication">→ View Project</a>
     </td>
     <td width="50%" valign="top">
       <h3>🔬 Develop ML Solution</h3>
-      <img src="app/images/coding.png" width="100%" alt="Develop ML Solution" /><br/>
+      <img src="app/images/develop-ml.png" width="100%" alt="Develop ML Solution" /><br/>
       A deep-learning pipeline covering feature engineering, model training, and optimization.<br/><br/>
       <b>Stack:</b> Python<br/>
       <a href="https://github.com/TomHM31/Develop-ML">→ View Project</a>

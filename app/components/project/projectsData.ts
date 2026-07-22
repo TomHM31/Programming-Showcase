@@ -1,10 +1,12 @@
 import type { StaticImageData } from "next/image";
-import multiAgentImg from "../../images/multi_agent.webp";
-import chatbotImg from "../../images/chatbot.png";
-import tuningImg from "../../images/tuning.png";
-import rocketImg from "../../images/rocket.png";
-import restaurantImg from "../../images/restaurant.webp";
-import lostInSpaceImg from "../../images/lost_in_space.png";
+import multiAgentImg from "../../images/multiagent-game.png";
+import chatbotImg from "../../images/ai-chatbox.png";
+import tuningImg from "../../images/xdeepfm.png";
+import rocketImg from "../../images/develop-ml.png";
+import restaurantImg from "../../images/restaurant-menu.png";
+import lostInSpaceImg from "../../images/lost-in-space.png";
+import social from "../../images/social-notebook.png";
+import youtoshort from "../../images/youtoshorts.png";
 
 export type FilterKey = "all" | "ai" | "fullstack" | "video" | "games";
 export type ProjectCategory = Exclude<FilterKey, "all">;
@@ -63,7 +65,7 @@ export const PROJECTS: Project[] = [
     topStack: ["Next.js", "FastAPI", "Gemini"],
     statusLine: "status: working MVP · phases 1–4 done",
     cats: ["ai", "fullstack"],
-    img: null,
+    img: social,
     videoHint: "/previews/social-notebook.mp4",
     url: "https://github.com/TomHM31",
   },
@@ -95,7 +97,7 @@ export const PROJECTS: Project[] = [
     topStack: ["Python", "Whisper", "ffmpeg"],
     statusLine: "status: all features working · 83/83 tests",
     cats: ["ai", "video"],
-    img: null,
+    img: youtoshort,
     videoHint: "/previews/youtoshorts.mp4",
     url: "https://github.com/TomHM31",
   },
@@ -204,7 +206,8 @@ export const PROJECTS: Project[] = [
     name: "Lost In Space",
     year: "2023",
     category: "games",
-    tagline: "2-D space exploration game with real-time physics and infinite worlds.",
+    tagline:
+      "2-D space exploration game with real-time physics and infinite worlds.",
     desc: "A 2-D space exploration game featuring infinite exploration, real-time physics with collision detection, and multiple weapon systems and power-ups.",
     points: [
       "Infinite procedural exploration",

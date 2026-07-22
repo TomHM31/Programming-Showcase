@@ -1,8 +1,8 @@
 import Image, { type StaticImageData } from "next/image";
 import Link from "next/link";
-import multiAgentImg from "../../images/multi_agent.webp";
-import chatbotImg from "../../images/chatbot.png";
-import tuningImg from "../../images/tuning.png";
+import youtoShortsImg from "../../images/youtoshorts.png";
+import socialNotebookImg from "../../images/social-notebook.png";
+import multiAgentImg from "../../images/multiagent-game.png";
 
 type Project = {
   name: string;
@@ -14,25 +14,25 @@ type Project = {
 
 const PROJECTS: Project[] = [
   {
+    name: "YoutoShorts",
+    desc: "Turns any YouTube video into ranked viral Shorts — LLM clip picking, face tracking, and karaoke captions, fully automated.",
+    img: youtoShortsImg,
+    url: "https://github.com/TomHM31",
+    stack: ["Python", "Whisper", "ffmpeg"],
+  },
+  {
+    name: "Social Notebook",
+    desc: "NotebookLM for your social feeds — paste Reels, FB, Insta or YouTube links and chat with cited answers grounded in your content.",
+    img: socialNotebookImg,
+    url: "https://github.com/TomHM31",
+    stack: ["Next.js", "FastAPI", "Gemini"],
+  },
+  {
     name: "Multi-Agent Game Generator",
     desc: "Deep learning-based game environment synthesis — generates playable Pacman & Snake games with statistical boards.",
     img: multiAgentImg,
     url: "https://github.com/TomHM31/Multi-Agent-Game-Generator",
     stack: ["Python", "CrewAI", "Gemini"],
-  },
-  {
-    name: "AI Chatbox",
-    desc: "Context-aware chatbot powered by Gemini with custom prompt engineering — the same system running on this page.",
-    img: chatbotImg,
-    url: "https://github.com/TomHM31/AI-Chatbox",
-    stack: ["Next.js", "TypeScript", "Gemini"],
-  },
-  {
-    name: "xDeepFM Replication",
-    desc: "Replicated and tuned xDeepFM — optimized CIN layers and dynamic feature selection for 10% faster inference.",
-    img: tuningImg,
-    url: "https://github.com/TomHM31/xDeepFM-Replication",
-    stack: ["Python", "PyTorch", "Statistics"],
   },
 ];
 
@@ -51,7 +51,7 @@ export default function FeaturedProjects() {
           href="/project"
           className="text-[13px] text-cyan-400 hover:underline"
         >
-          all 6 projects →
+          all 8 projects →
         </Link>
       </div>
       <div className="grid gap-5 md:grid-cols-3">
