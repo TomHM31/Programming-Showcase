@@ -1,214 +1,29 @@
-import Image from "next/image";
-import portrait from "./images/portrait.jpg";
 import Header from "./components/header";
-import TerminalHero from "./components/TerminalHero";
-import AIChat from "./components/AIChat";
+import Hero from "./components/home/Hero";
+import StatusBar from "./components/home/StatusBar";
+import SkillsSection from "./components/home/SkillsSection";
+import ExperienceLog from "./components/home/ExperienceLog";
+import FeaturedProjects from "./components/home/FeaturedProjects";
+import HomeChat from "./components/home/HomeChat";
+import HomeFooter from "./components/home/HomeFooter";
 
 export default function Home() {
   const authorName = process.env.NEXT_PUBLIC_AUTHOR_NAME ?? "Hoang Minh Khoi";
-  const authorEmail =
-    process.env.NEXT_PUBLIC_AUTHOR_EMAIL ?? "example@example.com";
-  const authorPhone = process.env.NEXT_PUBLIC_AUTHOR_PHONE ?? "000-000-0000";
-  const linkedInText =
-    process.env.NEXT_PUBLIC_AUTHOR_LINKEDIN_TEXT ?? "LinkedIn Profile";
-  const linkedInUrl =
-    process.env.NEXT_PUBLIC_AUTHOR_LINKEDIN_URL ??
-    "https://www.linkedin.com/in/tom-hoang3108/";
   const resumeText =
     process.env.NEXT_PUBLIC_RESUME_TEXT ?? "[paste your resume text here]";
-  return (
-    <div className="min-h-screen p-6">
-      <Header />
-      <div className="home-hero-stack">
-        <TerminalHero
-          name={authorName}
-          onViewWorkHref="/project"
-          onChatHref="#ai-chat"
-        />
-        <div className="hero-section home-hero-banner text-white text-center">
-          <h1 className="text-5xl font-bold">Welcome to My Portfolio</h1>
-          <p className="text-xl">Explore my work and experience in AI</p>
-        </div>
-        <AIChat resumeText={resumeText} />
-      </div>
-      <div className="content-wrapper mt-20">
-        <div className="content-box">
-          <section className="mb-8">
-            <div className="header-container">
-              <Image
-                src={portrait}
-                alt="Picture of the author"
-                className="profile-image"
-                width={200}
-                height={200}
-              />
-              <div className="header-content">
-                <p className="text-xl text-gray-600">Aspiring AI</p>
-                <p className="">"Consistence is key to success"</p>
-                <h1 className="heading-1 animated-text">{authorName}</h1>
-                <div className="mt-4"></div>
-              </div>
-            </div>
-            <div className="mt-4">
-              <p>
-                Email:{" "}
-                <a href="whyareyouspamming@gmail.com" className="text-blue-500">
-                  hoangminhkhoi3108@gmail.com
-                </a>
-              </p>
-              <p>Phone: {authorPhone} </p>
-              <p>
-                LinkedIn:{" "}
-                <a href={linkedInUrl} className="text-blue-500">
-                  {linkedInText}
-                </a>
-              </p>
-            </div>
-          </section>
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold border-b pb-2 mb-4">
-              Summary
-            </h2>
-            <p>
-              Passionate AI enthusiastic with experience in machine learning,
-              deep learning, and data analysis.
-            </p>
-          </section>
-          <section className="mb-12">
-            <h2 className="text-2xl font-semibold border-b pb-2 mb-4">
-              Experience
-            </h2>
-            <div className="mb-4">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-l font-semibold mb-3">
-                  FPT Software - Full Stack Developer & AI researcher (STU)
-                </h3>
-                <p className="text-gray-600">Oct 2023 - Jan 2024</p>
-              </div>
-              <ul className="list-disc list-inside">
-                <li>
-                  Built advanced regression, classification, and clustering
-                  models for research and product development
-                </li>
-                <li>
-                  Collaborated with senior DevOps, achieving a 15% boost in
-                  coding efficiency
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-semibold mb-3">
-                  FPT Software - AI Prompt (EBS)
-                </h3>
-                <p className="text-gray-600">Oct 2024 - Jan 2025</p>
-              </div>
-              <ul className="list-disc list-inside">
-                <li>
-                  Created and optimized AI prompts for email automation,
-                  translation, and data analysis
-                </li>
-                <li>
-                  Implemented data pipelines for more efficient processing and
-                  analytics
-                </li>
-              </ul>
-            </div>
-            <div>
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-xl font-semibold mb-3">
-                  Twin - AI Prompt & Chatbot
-                </h3>
-                <p className="text-gray-600">Oct 2024 - Jan 2025</p>
-              </div>
-              <ul className="list-disc list-inside">
-                <li>
-                  Developed and integrated AI-driven chatbots using Google
-                  “Gemini” with vector DB and BigQuery
-                </li>
-                <li>
-                  Implement new conversation-based features that boosted overall
-                  efficiency by 20%
-                </li>
-              </ul>
-            </div>
-          </section>
-          <section className="mb-8">
-            <h2 className="text-2xl font-semibold border-b pb-2 mb-4">
-              Education
-            </h2>
-            <div className="flex justify-between items-center mb-4">
-              <h3 className="text-xl font-semibold">
-                Deakin University - Bachelor of Artificial Intelligence
-              </h3>
-              <p className="text-gray-600">2023 - Current</p>
-            </div>
-          </section>
-          <section>
-            <h2 className="text-2xl font-semibold border-b pb-2 mb-4">
-              Skills
-            </h2>
 
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>Machine Learning</span>
-                  <span>85%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    className="bg-blue-600 h-2.5 rounded-full"
-                    style={{ width: "85%" }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>Prompting</span>
-                  <span>95%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    className="bg-blue-600 h-2.5 rounded-full"
-                    style={{ width: "95%" }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>NLP</span>
-                  <span>90%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    className="bg-blue-600 h-2.5 rounded-full"
-                    style={{ width: "90%" }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-            <div className="space-y-4">
-              <div>
-                <div className="flex justify-between mb-1">
-                  <span>Deep Learning</span>
-                  <span>85%</span>
-                </div>
-                <div className="w-full bg-gray-200 rounded-full h-2.5">
-                  <div
-                    className="bg-blue-600 h-2.5 rounded-full"
-                    style={{ width: "85%" }}
-                  ></div>
-                </div>
-              </div>
-            </div>
-          </section>
-          {/* <section></section> */}
-        </div>
-      </div>
+  return (
+    <div className="home-root min-h-screen bg-[#0a0a0a] pt-32 text-neutral-200 md:pt-24">
+      <Header />
+      <main>
+        <Hero name={authorName} />
+        <StatusBar />
+        <SkillsSection />
+        <ExperienceLog />
+        <FeaturedProjects />
+        <HomeChat resumeText={resumeText} />
+      </main>
+      <HomeFooter />
     </div>
   );
 }

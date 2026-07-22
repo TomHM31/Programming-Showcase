@@ -1,224 +1,35 @@
-import Link from "next/link";
-import Image from "next/image";
-import gaming from "../images/lost_in_space.png";
-import coding from "../images/chatbot.png";
-import rocket from "../images/rocket.png";
-import potato from "../images/tuning.png";
-import agent from "../images/multi_agent.webp";
-import restaurant from "../images/restaurant.webp";
+import type { Metadata } from "next";
 import Header from "../components/header";
+import HomeFooter from "../components/home/HomeFooter";
+import ProjectsExplorer from "../components/project/ProjectsExplorer";
+import TypedCommand from "../components/project/TypedCommand";
 
-export default function Dashboard() {
+export const metadata: Metadata = {
+  title: "Tom Hoang — Projects",
+  description:
+    "Projects by Tom Hoang — AI/ML pipelines, multi-agent systems, and full-stack builds, from local MVPs to shipped production systems.",
+};
+
+export default function ProjectsPage() {
   return (
-    <div className="min-h-screen bg-gray p-6 font-mono">
+    <div className="home-root min-h-screen bg-[#0a0a0a] pt-32 text-neutral-200 md:pt-24">
       <Header />
-
-      <main className="dashboard text-white">
-        <h1 className="heading-2 text-white">Projects</h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div className="bg-zinc-700 text-white p-6 rounded-lg fade-up  ">
-            <h2 className="text-xl font-semibold mb-4">Lost In Space</h2>
-            <div className="flex flex-row items-start gap-10">
-              <Link href="https://github.com/TomHM31/LostinSpace">
-                <Image
-                  src={gaming}
-                  width={400}
-                  height={150}
-                  alt="Lost in Space"
-                  className="image-vibrate"
-                />
-              </Link>
-              <div className="flex-1 flex-col h-full">
-                <div className="space-y-5 text-lg">
-                  <p className="">"A 2-D space exploration"</p>
-                  <p className="mt-3">Infinite exploration</p>
-                  <p className="mt-3">
-                    Real-time physics and collision detection
-                  </p>
-                  <p className="mt-3">Multiple weapon systems and power-ups</p>
-                  <p className="mt-3">Written in C++</p>
-                </div>
-                <div className="mt-40 flex justify-center">
-                  <Link href="https://github.com/TomHM31/LostinSpace">
-                    <button className="btn-grad ">View Project</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
+      <main>
+        <section className="mx-auto max-w-[1440px] px-6 pb-7 pt-14 md:px-12">
+          <div className="mb-3.5 text-[13px] text-[#8a8a8a]">
+            <span className="text-cyan-400">$</span> <TypedCommand />
           </div>
-
-          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
-            <h2 className="text-xl font-semibold mb-4">AI Chatbox</h2>
-            <div className="flex flex-row items-start gap-10">
-              <Link href="https://github.com/TomHM31/AI-Chatbox">
-                <Image
-                  src={coding}
-                  width={400}
-                  height={150}
-                  alt="AI Chatbox"
-                  className="image-vibrate"
-                />
-              </Link>
-              <div className="flex-1 flex-col h-full">
-                <div className="space-y-5 text-lg">
-                  <p className="">"Chatbox powered by Gemini "</p>
-                  <p className="mt-2">
-                    Natural language processing capabilities
-                  </p>
-                  <p className="mt-2">Context-aware responses</p>
-                  <p className="mt-2">Custom prompt engineering</p>
-                  <p className="mt-2">Built with Next.js and TypeScript</p>
-                </div>
-                <div className="mt-40 flex justify-center">
-                  <Link href="https://github.com/TomHM31/AI-Chatbox">
-                    <button className="btn-grad ">View Project</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
-            <h2 className="text-xl font-semibold mb-4">Develop ML Solution</h2>
-            <div className="flex flex-row items-start gap-10">
-              <Link href="https://github.com/TomHM31/Develop-ML">
-                <Image
-                  src={rocket}
-                  width={400}
-                  height={150}
-                  alt="Lost in Space"
-                  className="image-vibrate"
-                />
-              </Link>
-              <div className="flex-1 flex-col h-full">
-                <div className="space-y-1 text-lg">
-                  <p className="">
-                    "Machine learning pipeline for predictive analytics"
-                  </p>
-                  <p className="mt-2">Implements deep learning models</p>
-                  <p className="mt-2">
-                    Compete against model from research paper
-                  </p>
-                  <p className="mt-2">
-                    Used Recursive Feature Elimination, VotingClassifier,
-                    RandonizedSearchCV
-                  </p>
-                  <p className="mt-2">Built with Python</p>
-                </div>
-                <div className="mt-40 flex justify-center">
-                  <Link href="https://github.com/TomHM31/Develop-ML">
-                    <button className="btn-grad ">View Project</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
-            <h2 className="text-xl font-semibold mb-4">xDeepFM Replication</h2>
-            <div className="flex flex-row items-start gap-10">
-              <Link href="https://github.com/TomHM31/xDeepFM-Replication">
-                <Image
-                  src={potato}
-                  width={400}
-                  height={150}
-                  alt="xDeepFM"
-                  className="image-vibrate"
-                />
-              </Link>
-              <div className="flex-1 flex-col h-full">
-                <div className="space-y-5 text-lg">
-                  <p className="mt-2">"Hyperparameter tuning experiments"</p>
-                  <p className="mt-2">
-                    Optimizing CIN layers, incoperating dynamic feature
-                    selection
-                  </p>
-                  <p className="mt-2">
-                    Achived 10% improvement in inference speed
-                  </p>
-                  <p className="mt-2">
-                    Python, PyTorch, and statistical analysis
-                  </p>
-                </div>
-                <div className="mt-40 flex justify-center">
-                  <Link href="https://github.com/TomHM31/xDeepFM-Replication">
-                    <button className="btn-grad ">View Project</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
-            <h2 className="text-xl font-semibold mb-4">
-              Multi-Agent Game Generator
-            </h2>
-            <div className="flex flex-row items-start gap-10">
-              <Link href="https://github.com/TomHM31/Multi-Agent-Game-Generator">
-                <Image
-                  src={agent}
-                  width={400}
-                  height={150}
-                  alt="Game Generator"
-                  className="image-vibrate"
-                />
-              </Link>
-              <div className="flex-1 flex-col h-full">
-                <div className="space-y-4 text-lg">
-                  <p>"Advanced Multi-Agent Environment Generation"</p>
-                  <p>
-                    Deep learning-based game environment synthesis. Able to
-                    generate Pacman & Snake game with statistical board
-                  </p>
-                  <p>Built with Python, CrewAI, Gemini</p>
-                </div>
-                <div className="mt-40 flex justify-center">
-                  <Link href="https://github.com/TomHM31/Multi-Agent-Game-Generator">
-                    <button className="btn-grad ">View Project</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="bg-zinc-700 p-6 rounded-lg fade-up delay-100 ">
-            <h2 className="text-xl font-semibold mb-4">
-              Restaurant Menu Fullstack
-            </h2>
-            <div className="flex flex-row items-start gap-10">
-              <Link href="https://github.com/TomHM31/Restaurant-Menu-FullStack">
-                <Image
-                  src={restaurant}
-                  width={400}
-                  height={150}
-                  alt="Restaurant Menu"
-                  className="image-vibrate"
-                />
-              </Link>
-              <div className="flex-1 flex-col h-full">
-                <div className="space-y-4 text-lg">
-                  <p>
-                    "Modern restaurant management system with real-time
-                    ordering"
-                  </p>
-                  <p>
-                    Elegant UI/UX design inspired by Michelin-starred
-                    establishments. Multi-table management, order tracking,
-                    saved accounts
-                  </p>
-
-                  <p>Built with React, PostgreSQL, Java Spring</p>
-                </div>
-                <div className="mt-40 flex justify-center">
-                  <Link href="https://github.com/TomHM31/Restaurant-Menu-FullStack">
-                    <button className="btn-grad ">View Project</button>
-                  </Link>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+          <h1 className="mb-2.5 text-[40px] font-bold tracking-[-0.02em] text-neutral-50">
+            Projects
+          </h1>
+          <p className="home-sans max-w-[560px] text-[15px] leading-[1.7] text-neutral-400">
+            Hover any project to preview it in motion. Every build here runs —
+            from local MVPs to shipped production systems.
+          </p>
+        </section>
+        <ProjectsExplorer />
       </main>
+      <HomeFooter />
     </div>
   );
 }
